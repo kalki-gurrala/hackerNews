@@ -1,0 +1,31 @@
+body {
+  background-color: #546de5;
+}
+.details {
+  background-color: #546de5;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-content: flex-start;
+  min-height: 100%;
+}
+
+.detailData {
+  height: 100%;
+  width: 85vw;
+  background-color: #778beb;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(55deg, #48a4e5 0%, #ac81d3 51%, #2cb5e8 85%);
+}
+
+.child {
+  align-items: flex-start;
+  display: flex;
+  flex-direction: column;
+  color: #000;
+}

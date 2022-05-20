@@ -1,24 +1,26 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
+import "./App.css";
+import Home from "./components/Home/Home";
+import { initialState, StateProvider } from "./state/StateProvider";
 
 function App() {
+  const [appState, setAppState] = useState(initialState);
+
+  const updateSearchTerm = (newSearchTerm) => {
+    setAppState({ ...appState, searchTerm: newSearchTerm });
+  };
+
+  const contextObject = {
+    searchTerm: appState.searchTerm,
+    updateSearchTerm,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StateProvider value={contextObject}>
+      <div className="App">
+        <Home />
+      </div>
+    </StateProvider>
   );
 }
 

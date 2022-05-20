@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Macondo&family=Poppins:wght@600&display=swap");
+
+* {
+  font-family: "Macondo", cursive;
+}
+.home-page {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  flex-grow: 1;
+  height: 100vh;
+  width: 100%;
+}
+.left-items {
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  object-fit: cover;
+  background-color: #546de5;
+}
+.logo {
+  width: 300px;
+  height: 150px;
+  object-fit: contain;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  border: 1px solid #dbdbdb;
+  height: 30px;
+  padding: 10px 20px;
+  border-radius: 999px;
+  max-width: 560px;
+  color: white;
+}
+
+.search-box:hover {
+  border: 1px solid #778beb;
+}
+
+.search-box > input {
+  flex: 1;
+  padding: 10px 20px;
+  font-size: medium;
+  border: none;
+  background-color: #546de5;
+}
+
+.search-box > input:focus {
+  outline: 0;
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+  text-align: center;
+}
+
+.home-buttons {
+  background-color: #546de5;
+  flex-direction: column;
+  height: 100vh;
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.suggestions {
+  cursor: pointer;
+  color: white;
+}
+.suggestions:hover {
+  color: aquamarine;
+}
+
+.click {
+  margin-top: 20px;
+  height: 400px;
+  width: 400px;
+  border-radius: 50px;
+}
